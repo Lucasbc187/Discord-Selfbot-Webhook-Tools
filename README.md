@@ -1,5 +1,6 @@
 # Discord-Selfbot-Webhook-Tools
-A Discord Selfbot with webhook tools to delete,spam and send messages
+A Discord Selfbot with webhook tools/commands coded in Python with Discord.py 
+Delete webhook,spam and send messages.
 So I'm beginning in programming and I decided to make a selfbot to mess with webhooks.
 I might add more commands and make a better code, for now thats it!
 Make sure open and read main.py i added explanation for each thing
