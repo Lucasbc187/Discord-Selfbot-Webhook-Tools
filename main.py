@@ -27,7 +27,7 @@ from colorama import Fore
 
 os.system('cls')
 prefix = input(f"{Fore.YELLOW}Input your desidered prefix:\n")
-token = input(f"{Fore.YELLOW}Input your token here :\n{Fore.RESET}")
+token = input(f"{Fore.YELLOW}Input your token here:\n{Fore.RESET}")
 Client = commands.Bot(description="DWTS",command_prefix=prefix,self_bot=True)
 # In client you can choose to change your desc,prefix if you want.   
 
