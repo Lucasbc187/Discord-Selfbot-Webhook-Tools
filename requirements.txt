@@ -1,0 +1,6 @@
+aiohttp==2.2.5
+colorama
+discord-webhook
+requests
+discord
+discord.py
