@@ -84,6 +84,17 @@ async def spamhook(ctx,args,*,hook_url):
     hook = DiscordWebhook(url=hook_url,content=args)
     while 3 > 2:
            response = hook.execute()
+            
 
+# Fourth Command | Setup Webhook
+# Usage : prefix + setuphook + webhook link + new-webhook-name
+# Changes the webhook name 
+# Simple command
+
+@Client.command()
+async def setuphook(ctx,url,hn):
+    await ctx.message.delete()
+    hook =  Webhook(url)
+    hook.modify(name=hn)
 # Login the selfbot
 Client.run(token, bot=False)
