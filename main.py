@@ -29,10 +29,9 @@ os.system('cls')
 prefix = input(f"{Fore.YELLOW}Input your desidered prefix:\n")
 token = input(f"{Fore.YELLOW}Input your token here:\n{Fore.RESET}")
 Client = commands.Bot(description="DWTS",command_prefix=prefix,self_bot=True)
-# In client you can choose to change your desc,prefix if you want.   
 
 # First Command  | Delete Webhook
-# Usage : prefix($)delhook + webhook link
+# Usage : prefix + delhook + webhook link
 # It deletes a webhook without being in the server or having perms to do it.
 # Casually used to delete webhooks from token grabbers (my intention for yall use it)
 # args goes for webhook link
@@ -60,7 +59,7 @@ async def delhook(ctx,*,args):
                 await ctx.send("Deleted!")
 
 # Second Command | Send Webhook
-# Usage : prefix($)sendhook + (message) + webhook link to send message.
+# Usage : prefix + sendhook + (message) + webhook link to send message.
 # Simple code to send messages to webhooks (without spamming).
 # hook_url goes for webhook link
 # args goes for message/content
@@ -72,7 +71,7 @@ async def sendhook(ctx,args,*,hook_url):
     await ctx.message.delete()
 
 # Third Command | Spam Webhook (unsafe!)
-# Usage : prefix($)spamhook + message + webhooklink
+# Usage : prefix + spamhook + message + webhooklink
 # Spamming webhook with a message nonstop
 # You might get rate limited from Discord so, I highly recommend using a VPN to avoid it.
 # Basically they block your IP from discord for some mins 
