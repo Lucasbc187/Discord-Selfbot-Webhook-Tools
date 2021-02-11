@@ -27,19 +27,19 @@ Selfbots use tokens to login the bot to the account
 
 
 # First Command  | Delete Webhook
-Usage : prefix($)delhook + webhook link
+Usage : prefix + delhook + webhook link
 It deletes a webhook without being in the server or having perms to do it.
 Casually used to delete webhooks from token grabbers (my intention for yall use it)
 args goes for webhook link
 
 # Second Command | Send Webhook
-Usage : prefix($)sendhook + (message) + webhook link to send message.
+Usage : prefix + sendhook + (message) + webhook link to send message.
 Simple code to send messages to webhooks (without spamming).
 hook_url goes for webhook link
 args goes for message/content
 
 # Third Command | Spam Webhook (unsafe!)
-Usage : prefix($)spamhook + message + webhooklink
+Usage : prefix + spamhook + message + webhooklink
 Spamming webhook with a message nonstop
 You might get rate limited from Discord so, I highly recommend using a VPN to avoid it.
 Basically they block your IP from discord for some mins 
