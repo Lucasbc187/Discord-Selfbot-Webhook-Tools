@@ -4,7 +4,8 @@ from discord import webhook
 import discord_webhook
 from discord_webhook import DiscordEmbed, DiscordWebhook
 from discord.ext import commands
-import aiohttp,requests
+import aiohttp,requests,os
+from colorama import Fore
 
 # PS.
 # Selfbots are against ToS, if someone see you are using it, you might get reported and 
@@ -24,8 +25,10 @@ import aiohttp,requests
 # If you don't know how to get your token 
 # < https://www.youtube.com/watch?v=YEgFvgg7ZPI >
 
-token = "your-token-here"
-Client = commands.Bot(description="DWTS",command_prefix="$",self_bot=True)
+os.system('cls')
+prefix = input(f"{Fore.YELLOW}Input your desidered prefix:\n")
+token = input(f"{Fore.YELLOW}Input your token here :\n{Fore.RESET}")
+Client = commands.Bot(description="DWTS",command_prefix=prefix,self_bot=True)
 # In client you can choose to change your desc,prefix if you want.   
 
 # First Command  | Delete Webhook
@@ -34,6 +37,15 @@ Client = commands.Bot(description="DWTS",command_prefix="$",self_bot=True)
 # Casually used to delete webhooks from token grabbers (my intention for yall use it)
 # args goes for webhook link
 
+@Client.event
+async def on_connect():
+    os.system('cls')
+    print(f"{Fore.RED}Selfbot Started!")
+    print(f"{Fore.RED}Username:")
+    print(f"{Fore.BLUE}{Client.user.name}#{Client.user.discriminator}")
+    print(f"{Fore.RED}ID:\n{Fore.BLUE}{Client.user.id}")
+    print(f"{Fore.RED}Token:\n{Fore.BLUE}{token}")
+    print(f"{Fore.RED}Current Prefix:\n{Fore.BLUE}{prefix}")
 @Client.command()                    
 async def delhook(ctx,*,args):
     await ctx.message.delete()
@@ -73,7 +85,6 @@ async def spamhook(ctx,args,*,hook_url):
     hook = DiscordWebhook(url=hook_url,content=args)
     while 3 > 2:
            response = hook.execute()
-
 
 # Login the selfbot
 Client.run(token, bot=False)
