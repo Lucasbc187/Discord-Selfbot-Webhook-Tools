@@ -96,5 +96,6 @@ async def setuphook(ctx,url,hn):
     await ctx.message.delete()
     hook =  Webhook(url)
     hook.modify(name=hn)
+   
 # Login the selfbot
 Client.run(token, bot=False)
